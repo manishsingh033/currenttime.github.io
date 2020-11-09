@@ -1,91 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
-        <!--jQuery library--> 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-        <!--Latest compiled and minified JavaScript--> 
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <!-- <link href="css/style.css" rel="stylesheet"> -->
-        <title>Clock Using Pure JS</title>
-        <link rel="stylesheet" href="index.css">
-        <script src="index.js"></script>
-        <script>
-            let a;
-            let date;
-            let time;
-            const options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
-            setInterval(() => {
-                a = new Date();
-                date = a.toLocaleDateString(undefined, options);
-                time = a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds();
-                document.getElementById('time').innerHTML = time + "<br>on " + date;
-            }, 1000);
-        </script>
-    </head>
-    <body>
-        <div id="clockContainer">
-            <div id="hour"></div>
-            <div id="minute"></div>
-            <div id="second"></div>
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--jQuery library-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
+    <!--Latest compiled and minified JavaScript-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <title>Clock Using Pure JS</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <script>
+        let a;
+        let date;
+        let time;
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        setInterval(() => {
+            a = new Date();
+            date = a.toLocaleDateString(undefined, options);
+            time = a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds();
+            document.getElementById('time').innerHTML = time + "<br>on " + date;
+        }, 1000);
+    </script>
+</head>
 
+<body>
 
+    <nav class="navbar navbar-dark bg-dark">
 
+        <h1>TIME</h1>
+        <h2 background-color="red"><a href="https://manishsingh033.github.io/maintainer.github.io/">TO-DO-LIST</a></h2>
 
-
+    </nav>
 
 
-        <div class="container my-4">
-            <div class="jumbotron">
-                <h1 class="display-4">Current time Is: <span id="time"></span></h1>
-                <p class="lead">THE REAL INDIAN TIME AND DATE.</p>
-                <hr class="my-4">
-                <p>We are here to show you the time for different countries</p>
-                <p>
-                    <a class="btn btn-primary btn-lg" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                        WORLD TIME
-                    </a>
 
-                </p>
-                <div class="collapse" id="collapseExample">
-                    <div class="card card-body">
-                    g
-                    </div>
+    <div id="clockContainer">
+        <div id="hour"></div>
+        <div id="minute"></div>
+        <div id="second"></div>
+    </div>
+
+    <div class="container my-4">
+        <div class="jumbotron">
+            <h1 class="display-4">Current time Is: <span id="time"></span></h1>
+            <p class="lead">THE REAL INDIAN TIME AND DATE.</p>
+            <hr class="my-4">
+            <p>We are here to show you the time for different countries</p>
+            <p>
+                <a class="btn btn-primary btn-lg" data-toggle="collapse" href="#collapseExample" role="button"
+                    aria-expanded="false" aria-controls="collapseExample">
+                    WORLD TIME
+                </a>
+
+            </p>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    SOON AVAILABLE ..Work on Process!!!!!
                 </div>
-
             </div>
+
         </div>
+    </div>
+    <!-- Footer -->
+    <section id="footer">
+        <div class="footer container">
+            <div class="brand">
+                <h1><span>M</span>anish <span>S</span>ingh</h1>
+            </div>
+            <h2>MORE CONTACT INFO</h2>
+            <div class="social-icon">
+                <div class="social-item">
+                    <a href="https://www.facebook.com/manishtopperboy/"><img
+                            src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" /></a>
+                </div>
+                <div class="social-item">
+                    <a href="https://www.instagram.com/smokinmanish03/"><img
+                            src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
+                </div>
+                <div class="social-item">
+                    <a href="https://twitter.com/manish03singh"><img
+                            src="https://img.icons8.com/bubbles/100/000000/twitter.png" /></a>
+                </div>
+                <div class="social-item">
+                    <a href="https://github.com/manishsingh003"><img
+                            src="https://img.icons8.com/fluent/64/000000/github.png" /></a>
+                </div>
+                <div class="social-item">
+                    <a href="https://www.hackerrank.com/manishsingh03"><img
+                            src="https://img.icons8.com/windows/32/000000/hackerrank.png" /></a>
+                </div>
+            </div>
+            <p>Copyright © 2020 Manish. All rights reserved</p>
+        </div>
+    </section>
+    <!-- End Footer -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
 
 
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-                integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-                integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
-    </body>
+</body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
