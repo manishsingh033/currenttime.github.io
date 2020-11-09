@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        <!--jQuery library--> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <!--Latest compiled and minified JavaScript--> 
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- <link href="css/style.css" rel="stylesheet"> -->
+        <title>Clock Using Pure JS</title>
+        <link rel="stylesheet" href="index.css">
+        <script src="index.js"></script>
+        <script>
+            let a;
+            let date;
+            let time;
+            const options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
+            setInterval(() => {
+                a = new Date();
+                date = a.toLocaleDateString(undefined, options);
+                time = a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds();
+                document.getElementById('time').innerHTML = time + "<br>on " + date;
+            }, 1000);
+        </script>
+    </head>
+    <body>
+        <div id="clockContainer">
+            <div id="hour"></div>
+            <div id="minute"></div>
+            <div id="second"></div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="container my-4">
+            <div class="jumbotron">
+                <h1 class="display-4">Current time Is: <span id="time"></span></h1>
+                <p class="lead">THE REAL INDIAN TIME AND DATE.</p>
+                <hr class="my-4">
+                <p>We are here to show you the time for different countries</p>
+                <p>
+                    <a class="btn btn-primary btn-lg" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        WORLD TIME
+                    </a>
+
+                </p>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                    g
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+                integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+                integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
